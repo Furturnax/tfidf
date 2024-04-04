@@ -1,0 +1,23 @@
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    {% bootstrap_css %}
+  </head>
+  <body>
+    <main>
+      <div class="container py-5">
+        <p>Веб-приложение для обработки текстового документа с последующим 
+          отображаением таблицы. Топ 50 слов с самым высоким IDF.</p>
+        <p>Загрузите документ в формате TXT или CSV.</p>
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </body>
+</html>
